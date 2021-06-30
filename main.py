@@ -68,7 +68,7 @@ for (uid, message) in messages:
             upload_file(download_path, '', path)
             t.cleanup()
             os.remove(download_path)
-	    time.sleep(2)
+	    time.sleep(1)
             
         except:
             print(traceback.print_exc())
