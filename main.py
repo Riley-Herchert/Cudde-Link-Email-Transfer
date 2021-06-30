@@ -61,7 +61,7 @@ for (uid, message) in messages:
                 fp.write(attachment.get('content').read())
 
             timestamp = datetime.datetime.now()
-            ts = timestamp.strftime("%A %d %B %Y %I:%M:%S%p")
+            ts = timestamp.strftime("%y%m%d_%H%M%S%f")
             t = TempImage()
             print("[UPLOAD] {}".format(ts))
             path = "/{base_path}/{timestamp}.png".format(base_path='ICAI', timestamp=ts)
