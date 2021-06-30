@@ -8,6 +8,7 @@ import logging
 import boto3
 from botocore.exceptions import ClientError
 import os
+import time
 import uuid
 import datetime
 
@@ -67,6 +68,7 @@ for (uid, message) in messages:
             upload_file(download_path, '', path)
             t.cleanup()
             os.remove(download_path)
+	    time.sleep(2)
             
         except:
             print(traceback.print_exc())
